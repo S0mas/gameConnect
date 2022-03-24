@@ -1,5 +1,5 @@
 #include <example_service/authorization/authorization.hpp>
-#include <server/server.hpp>
+#include <gameConnect_server/gameConnect_server.hpp>
 
 int main() {
     GameConnectServer server;

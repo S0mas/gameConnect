@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package operation;
+
+import "google/protobuf/empty.proto";
+
+service Operation {
+    rpc DoOperation(DoOperationRequest) returns(google.protobuf.Empty);
+}
+
+message DoOperationRequest {
+    int32 id = 1;
+    string data = 2;
+}

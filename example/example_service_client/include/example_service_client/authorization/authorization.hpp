@@ -1,5 +1,5 @@
 #pragma once
-#include <serviceClient/serviceClient.hpp>
+#include <gameConnect_serviceClient/gameConnect_serviceClient.hpp>
 #include <protos/Authorization.grpc.pb.h>
 #include <loguru/loguru.hpp>
 

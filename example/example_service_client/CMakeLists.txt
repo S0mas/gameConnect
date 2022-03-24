@@ -8,7 +8,7 @@ include_directories(${gameConnect_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PUBLIC
     loguru
     protos
-    serviceClient
+    gameConnect_serviceClient
 )
 
 target_include_directories(${PROJECT_NAME}

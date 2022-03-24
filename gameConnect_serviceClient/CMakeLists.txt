@@ -1,6 +1,6 @@
-project(server)
+project(gameConnect_serviceClient)
 
-add_library(${PROJECT_NAME} src/server.cpp)
+add_library(${PROJECT_NAME} src/gameConnect_serviceClient.cpp)
 add_library(gameConnect::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
@@ -14,12 +14,11 @@ target_include_directories(${PROJECT_NAME} INTERFACE
     $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-  PUBLIC_HEADER "server.hpp")
+  PUBLIC_HEADER "gameConnect_serviceClient.hpp")
 
 install(TARGETS ${PROJECT_NAME}
-  # IMPORTANT: Add the foo library to the "export-set"
   EXPORT gameConnectTargets
   RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT bin
   LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT lib
-  PUBLIC_HEADER DESTINATION "${INSTALL_INCLUDE_DIR}/server"
+  PUBLIC_HEADER DESTINATION "${INSTALL_INCLUDE_DIR}/gameConnect_serviceClient"
     COMPONENT dev)

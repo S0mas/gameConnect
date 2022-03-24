@@ -7,7 +7,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 include_directories(${gameConnect_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PUBLIC
     example_service
-    server
+    gameConnect_server
     loguru
 )
 

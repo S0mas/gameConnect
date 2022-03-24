@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package stream;
+
+import "google/protobuf/any.proto";
+
+service Stream {
+    rpc BiDir (stream ClientRequest) returns (stream ServerRequest);
+}
+
+message ServerRequest {
+    int32 someValue = 1;
+}
+
+
+message ClientRequest {
+    int32 someValue = 1;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package authorization;
+
+import "google/protobuf/empty.proto";
+
+// Token should be stored in metadata under 'Authorization' key
+
+service Authorization {
+    rpc Login(LoginRequest) returns(Token);
+    rpc Register(RegisterRequest) returns(google.protobuf.Empty);
+    rpc RemindPassword(RemindPasswordRequest) returns(google.protobuf.Empty);
+}
+
+message LoginRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message RegisterRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message RemindPasswordRequest {
+    string email = 1;
+}
+
+message Token  {
+    string token = 1;
+}
